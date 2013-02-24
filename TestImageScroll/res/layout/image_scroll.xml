@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:gravity="center"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<!-- 画像 -->
+	<ImageView
+		android:id="@+id/image_view"
+		android:scaleType="center"
+		android:layout_centerInParent="true"
+		android:layout_gravity="center"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+
+	<!-- 表示モード切り替え -->
+	<TextView
+		android:id="@+id/display_mode"
+		android:background="#88000000"
+		android:textColor="#FFFFFF"
+		android:textStyle="bold"
+		android:textSize="18sp"
+		android:shadowColor="#000000"
+		android:shadowRadius="1.2"
+		android:shadowDx="0"
+		android:shadowDy="2"
+		android:gravity="center"
+		android:padding="4dp"
+		android:layout_alignParentTop="true"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+</RelativeLayout>
