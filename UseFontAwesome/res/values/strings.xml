@@ -2,8 +2,7 @@
 <resources>
 
     <string name="app_name">UseFontAwesome</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_icon_list">IconListActivity</string>
+    <string name="title_activity_icon_list">Icon list</string>
+    <string name="title_activity_icon_with_controls">Icon with controls</string>
 
 </resources>

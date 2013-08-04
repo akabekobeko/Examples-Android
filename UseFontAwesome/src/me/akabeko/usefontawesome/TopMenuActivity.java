@@ -26,6 +26,7 @@ public class TopMenuActivity extends Activity {
         ArrayAdapter< String > adapter = new ArrayAdapter< String >( this, android.R.layout.simple_list_item_1 );
         adapter.add( "Icon list from assets"  );
         adapter.add( "Icon list from res/raw" );
+        adapter.add( "Icon with controls" );
 
         ListView listView = ( ListView )this.findViewById( R.id.menuListView );
         listView.setAdapter( adapter );
@@ -40,6 +41,10 @@ public class TopMenuActivity extends Activity {
                 case 1:
                     showIconListActivity( true );
                     break;
+
+                case 2:
+                    showIconWithControlsActivity();
+                    break;
                 }
             }
         } );
@@ -47,12 +52,20 @@ public class TopMenuActivity extends Activity {
 
     /**
      * アイコン一覧画面を表示します。
-     * 
+     *
      * @param isLoadFontFromRaw アイコンを res/raw から読み込む場合は true。assets の場合は false。
      */
     private void showIconListActivity( boolean isLoadFontFromRaw ) {
         Intent intent = new Intent( TopMenuActivity.this, IconListActivity.class );
         intent.putExtra( IconListActivity.INTENT_EXTRA_LOAD_FONT_FROM_RAW, isLoadFontFromRaw );
+        this.startActivity( intent );
+    }
+
+    /**
+     * アイコンとコントロールの組み合わせ画面を表示します。
+     */
+    private void showIconWithControlsActivity() {
+        Intent intent = new Intent( TopMenuActivity.this, IconWithControlsActivity.class );
         this.startActivity( intent );
     }
 }

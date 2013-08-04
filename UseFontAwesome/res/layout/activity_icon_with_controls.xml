@@ -1,0 +1,42 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/iconBbutton"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/iconCheckBox"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckedTextView
+        android:id="@+id/iconCheckedTextView"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioButton
+        android:id="@+id/iconRadioButton"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ToggleButton
+        android:id="@+id/iconToggleButton"
+        android:textSize="20sp"
+        android:layout_margin="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
