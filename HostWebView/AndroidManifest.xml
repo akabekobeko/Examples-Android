@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="me.akabeko.hostwebview.BasicCoordinationActivity"
+            android:label="@string/title_activity_basic_coordination" >
+        </activity>
+        <activity
+            android:name="me.akabeko.hostwebview.GoogleMapsActivity"
+            android:label="@string/title_activity_google_maps" >
+        </activity>
     </application>
 
 </manifest>
