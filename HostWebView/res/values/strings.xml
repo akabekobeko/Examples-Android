@@ -4,7 +4,6 @@
     <string name="app_name">Host WebView</string>
     <string name="top_menu_basic_coordination">Basic Coordination</string>
     <string name="top_menu_google_maps_api">Google Maps API</string>
-    <string name="title_activity_basic_coordination">BasicCoordinationActivity</string>
-    <string name="title_activity_google_maps">GoogleMapsActivity</string>
+    <string name="text_from_webview">Text from WebView</string>
 
 </resources>

@@ -24,11 +24,11 @@
         </activity>
         <activity
             android:name="me.akabeko.hostwebview.BasicCoordinationActivity"
-            android:label="@string/title_activity_basic_coordination" >
+            android:label="@string/top_menu_basic_coordination" >
         </activity>
         <activity
             android:name="me.akabeko.hostwebview.GoogleMapsActivity"
-            android:label="@string/title_activity_google_maps" >
+            android:label="@string/top_menu_google_maps_api" >
         </activity>
     </application>
 
