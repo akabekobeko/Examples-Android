@@ -8,6 +8,7 @@ import java.util.Map;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -87,7 +88,7 @@ public class GoogleMapsActivity extends Activity {
         editText.setOnEditorActionListener( new OnEditorActionListener() {
             @Override
             public boolean onEditorAction( TextView v, int actionId, KeyEvent event ) {
-                if( event.getKeyCode() == KeyEvent.KEYCODE_ENTER ) {
+                if( actionId == EditorInfo.IME_ACTION_DONE ) {
                     InputMethodManager imm = ( InputMethodManager )getSystemService( INPUT_METHOD_SERVICE );
                     imm.hideSoftInputFromWindow( v.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY );
                     imm.hideSoftInputFromWindow( v.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS );
