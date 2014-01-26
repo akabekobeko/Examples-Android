@@ -11,25 +11,25 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 /**
- * ƒAƒCƒRƒ“ˆê——‚ÆƒAƒCƒeƒ€‚ğŠÖ˜A•t‚¯‚Ü‚·B
+ * ã‚¢ã‚¤ã‚³ãƒ³ä¸€è¦§ã¨ã‚¢ã‚¤ãƒ†ãƒ ã‚’é–¢é€£ä»˜ã‘ã¾ã™ã€‚
  */
 public class IconListItemAdapter extends ArrayAdapter< IconInfo > {
     /**
-     * ƒŒƒCƒAƒEƒg‘€ì—pƒIƒuƒWƒFƒNƒgB
+     * ãƒ¬ã‚¤ã‚¢ã‚¦ãƒˆæ“ä½œç”¨ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚
      */
     private LayoutInflater mLayoutInflater;
 
     /**
-     * ƒAƒCƒRƒ“•\¦‚Ég—p‚·‚éƒtƒHƒ“ƒgî•ñB
+     * ã‚¢ã‚¤ã‚³ãƒ³è¡¨ç¤ºã«ä½¿ç”¨ã™ã‚‹ãƒ•ã‚©ãƒ³ãƒˆæƒ…å ±ã€‚
      */
     private Typeface mIconTypeface;
 
     /**
-     * ƒCƒ“ƒXƒ^ƒ“ƒX‚ğ‰Šú‰»‚µ‚Ü‚·B
+     * ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’åˆæœŸåŒ–ã—ã¾ã™ã€‚
      *
-     * @param context      ƒRƒ“ƒeƒLƒXƒgB
-     * @param objects      ƒAƒCƒRƒ“î•ñƒRƒŒƒNƒVƒ‡ƒ“B
-     * @param iconTypeface ƒAƒCƒRƒ“•\¦‚Ég—p‚·‚éƒtƒHƒ“ƒgî•ñB
+     * @param context      ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã€‚
+     * @param objects      ã‚¢ã‚¤ã‚³ãƒ³æƒ…å ±ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã€‚
+     * @param iconTypeface ã‚¢ã‚¤ã‚³ãƒ³è¡¨ç¤ºã«ä½¿ç”¨ã™ã‚‹ãƒ•ã‚©ãƒ³ãƒˆæƒ…å ±ã€‚
      */
     public IconListItemAdapter( Context context, List< IconInfo > objects, Typeface iconTypeface ) {
         super( context, 0, objects );
@@ -39,13 +39,13 @@ public class IconListItemAdapter extends ArrayAdapter< IconInfo > {
     }
 
     /**
-     * ƒAƒCƒeƒ€‚Ì View ‚ğæ“¾‚µ‚Ü‚·B
+     * ã‚¢ã‚¤ãƒ†ãƒ ã® View ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * @param position    ƒAƒCƒeƒ€‚ÌˆÊ’uB
-     * @param convertView Šù’è‚Ì ViewB
-     * @param parent      e‚Æ‚È‚é ViewGroupB
+     * @param position    ã‚¢ã‚¤ãƒ†ãƒ ã®ä½ç½®ã€‚
+     * @param convertView æ—¢å®šã® Viewã€‚
+     * @param parent      è¦ªã¨ãªã‚‹ ViewGroupã€‚
      *
-     * @return ƒAƒCƒeƒ€‚Ì ViewB
+     * @return ã‚¢ã‚¤ãƒ†ãƒ ã® Viewã€‚
      */
     @Override
     public View getView( int position, View convertView, ViewGroup parent ) {
@@ -53,7 +53,7 @@ public class IconListItemAdapter extends ArrayAdapter< IconInfo > {
         if( convertView == null ) {
             convertView = this.mLayoutInflater.inflate( R.layout.item_icon_list, null );
 
-            // ƒRƒ“ƒgƒ[ƒ‹‚ÌQÆ‚ğƒLƒƒƒbƒVƒ…‚µAˆÈ~‚ÌŒŸõ‚ğÈ—ª‚·‚é
+            // ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®å‚ç…§ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ã€ä»¥é™ã®æ¤œç´¢ã‚’çœç•¥ã™ã‚‹
             holder = new ViewHolder();
             holder.GryphTextView   = ( TextView )convertView.findViewById( R.id.gryphTextView );
             holder.UnicodeTextView = ( TextView )convertView.findViewById( R.id.unicodeTextView );
@@ -72,16 +72,16 @@ public class IconListItemAdapter extends ArrayAdapter< IconInfo > {
     }
 
     /**
-     * ƒAƒCƒeƒ€‚Ì View “à‚É”z’u‚³‚ê‚½ƒRƒ“ƒgƒ[ƒ‹‚ÌQÆ‚ğƒLƒƒƒbƒVƒ…‚µ‚Ü‚·B
+     * ã‚¢ã‚¤ãƒ†ãƒ ã® View å†…ã«é…ç½®ã•ã‚ŒãŸã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®å‚ç…§ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ã¾ã™ã€‚
      */
     private class ViewHolder {
         /**
-         * ƒAƒCƒRƒ“•¶š‚ğ•\¦‚·‚é TextViewB
+         * ã‚¢ã‚¤ã‚³ãƒ³æ–‡å­—ã‚’è¡¨ç¤ºã™ã‚‹ TextViewã€‚
          */
         TextView GryphTextView;
 
         /**
-         * ƒAƒCƒRƒ“•¶š‚Ì UNICODE ‚ğ•\¦‚·‚é TextViewB
+         * ã‚¢ã‚¤ã‚³ãƒ³æ–‡å­—ã® UNICODE ã‚’è¡¨ç¤ºã™ã‚‹ TextViewã€‚
          */
         TextView UnicodeTextView;
     }

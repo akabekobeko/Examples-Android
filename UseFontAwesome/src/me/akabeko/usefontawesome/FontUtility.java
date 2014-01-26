@@ -13,42 +13,42 @@ import android.graphics.Typeface;
 import android.util.Log;
 
 /**
- * ƒtƒHƒ“ƒg‚ÉŠÖ‚·‚éƒ†[ƒeƒBƒŠƒeƒB‚Å‚·B 
+ * ãƒ•ã‚©ãƒ³ãƒˆã«é–¢ã™ã‚‹ãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ã§ã™ã€‚ 
  */
 public final class FontUtility {
     /**
-     * ƒtƒHƒ“ƒg‚ğ assets ‚©‚ç“Ç‚İ‚İ‚Ü‚·B
+     * ãƒ•ã‚©ãƒ³ãƒˆã‚’ assets ã‹ã‚‰èª­ã¿è¾¼ã¿ã¾ã™ã€‚
      *
-     * @param context ƒRƒ“ƒeƒLƒXƒgB
-     * @param path    ƒtƒHƒ“ƒg ƒtƒ@ƒCƒ‹‚ğ¦‚· assets ƒtƒHƒ‹ƒ_‚©‚ç‚Ì‘Š‘ÎƒpƒXB
+     * @param context ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã€‚
+     * @param path    ãƒ•ã‚©ãƒ³ãƒˆ ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç¤ºã™ assets ãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰ã®ç›¸å¯¾ãƒ‘ã‚¹ã€‚
      *
-     * @return ¬Œ÷‚ÍƒtƒHƒ“ƒgî•ñƒCƒ“ƒXƒ^ƒ“ƒXB‚»‚êˆÈŠO‚Í nullB
+     * @return æˆåŠŸæ™‚ã¯ãƒ•ã‚©ãƒ³ãƒˆæƒ…å ±ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã€‚ãã‚Œä»¥å¤–ã¯ nullã€‚
      */
     public static Typeface getTypefaceFromAssets( Context context, String path ) {
         return Typeface.createFromAsset( context.getAssets(), path );
     }
 
     /**
-     * ƒtƒHƒ“ƒg‚ğ res/raw ‚©‚ç“Ç‚İ‚İ‚Ü‚·B
-     * À‘•‚Í Stack Overflow ‚É“Še‚³‚ê‚½ˆÈ‰º‚Ì‹L–‚ğQl‚É‚µ‚Ä‚¢‚Ü‚·B
+     * ãƒ•ã‚©ãƒ³ãƒˆã‚’ res/raw ã‹ã‚‰èª­ã¿è¾¼ã¿ã¾ã™ã€‚
+     * å®Ÿè£…ã¯ Stack Overflow ã«æŠ•ç¨¿ã•ã‚ŒãŸä»¥ä¸‹ã®è¨˜äº‹ã‚’å‚è€ƒã«ã—ã¦ã„ã¾ã™ã€‚
      *
      * Font in Android Library - Stack Overflow
      * http://stackoverflow.com/questions/7610355/font-in-android-library
      *
-     * @param context    ƒRƒ“ƒeƒLƒXƒgB
-     * @param fileName ƒŠƒ\[ƒX¯•ÊqBR.raw ˆÈ‰º‚É’è‹`‚³‚ê‚½‚à‚Ì‚ğw’è‚µ‚Ü‚·B
+     * @param context    ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã€‚
+     * @param fileName ãƒªã‚½ãƒ¼ã‚¹è­˜åˆ¥å­ã€‚R.raw ä»¥ä¸‹ã«å®šç¾©ã•ã‚ŒãŸã‚‚ã®ã‚’æŒ‡å®šã—ã¾ã™ã€‚
      *
-     * @return ¬Œ÷‚ÍƒtƒHƒ“ƒgî•ñƒCƒ“ƒXƒ^ƒ“ƒXB‚»‚êˆÈŠO‚Í nullB
+     * @return æˆåŠŸæ™‚ã¯ãƒ•ã‚©ãƒ³ãƒˆæƒ…å ±ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã€‚ãã‚Œä»¥å¤–ã¯ nullã€‚
      */
     public static Typeface getTypefaceFromRaw( Context context, int resourceId ) {
         InputStream          inputStream  = null;
         BufferedOutputStream outputStream = null;
         Typeface             typeface     = null;
         try {
-            // res/raw ‚ÌƒtƒHƒ“ƒg‚ğƒƒ‚ƒŠ‚É“Ç‚İ‚Ş
+            // res/raw ã®ãƒ•ã‚©ãƒ³ãƒˆã‚’ãƒ¡ãƒ¢ãƒªã«èª­ã¿è¾¼ã‚€
             inputStream  = context.getResources().openRawResource( resourceId );
 
-            // ƒtƒHƒ“ƒg‚ğˆêƒtƒ@ƒCƒ‹‚Æ‚µ‚Äo—Í
+            // ãƒ•ã‚©ãƒ³ãƒˆã‚’ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ã¨ã—ã¦å‡ºåŠ›
             String fontFilePath = context.getCacheDir() + "/tmp" + System.currentTimeMillis() + ".raw";
             outputStream = new BufferedOutputStream( new FileOutputStream( fontFilePath ) );
 
@@ -58,7 +58,7 @@ public final class FontUtility {
                 outputStream.write( buffer, 0, length );
             }
 
-            // ƒtƒHƒ“ƒg‚Æ‚µ‚Ä“Ç‚İ‚ñ‚¾‚çAˆêƒtƒ@ƒCƒ‹‚ğÁ‚·
+            // ãƒ•ã‚©ãƒ³ãƒˆã¨ã—ã¦èª­ã¿è¾¼ã‚“ã ã‚‰ã€ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ¶ˆã™
             typeface = Typeface.createFromFile( fontFilePath );
             new File( fontFilePath ).delete();
 
@@ -77,9 +77,9 @@ public final class FontUtility {
     }
 
     /**
-     * ”jŠü‚·‚×‚«ƒŠƒ\[ƒX‚ğ‚ÂƒIƒuƒWƒFƒNƒg‚ğŠJ•ú‚µ‚Ü‚·B
+     * ç ´æ£„ã™ã¹ããƒªã‚½ãƒ¼ã‚¹ã‚’æŒã¤ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’é–‹æ”¾ã—ã¾ã™ã€‚
      *
-     * @param obj ƒIƒuƒWƒFƒNƒgB
+     * @param obj ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚
      */
     private static void tryClose( Closeable obj ) {
         if( obj != null ) {

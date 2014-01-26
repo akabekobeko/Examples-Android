@@ -1,33 +1,33 @@
 package me.akabeko.usefontawesome;
 
 /**
- * Font Awesome ‚ÌƒAƒCƒRƒ“î•ñ‚ğ•\‚µ‚Ü‚·B
+ * Font Awesome ã®ã‚¢ã‚¤ã‚³ãƒ³æƒ…å ±ã‚’è¡¨ã—ã¾ã™ã€‚
  */
 public class IconInfo {
     /**
-     * Font Awesome ‚É‚¨‚¯‚éƒAƒCƒRƒ“•¶š UNICODE ‚Ìn“_B
+     * Font Awesome ã«ãŠã‘ã‚‹ã‚¢ã‚¤ã‚³ãƒ³æ–‡å­— UNICODE ã®å§‹ç‚¹ã€‚
      */
     public static final char GRYPH_UNICODE_BEGIN  = 0xF000;
 
     /**
-     * Font Awesome ‚É‚¨‚¯‚éƒAƒCƒRƒ“•¶š UNICODE ‚ÌI“_B
+     * Font Awesome ã«ãŠã‘ã‚‹ã‚¢ã‚¤ã‚³ãƒ³æ–‡å­— UNICODE ã®çµ‚ç‚¹ã€‚
      */
     public static final char GRYPH_UNICODE_END  = 0xF18B;
 
     /**
-     * Font Awesome ‚ÌƒAƒCƒRƒ“‚É‘Î‰‚·‚é•¶šB
+     * Font Awesome ã®ã‚¢ã‚¤ã‚³ãƒ³ã«å¯¾å¿œã™ã‚‹æ–‡å­—ã€‚
      */
     private String mGlyph;
 
     /**
-     * Font Awesome ‚ÌƒAƒCƒRƒ“‚É‘Î‰‚·‚é•¶š‚Ì UNICODEB
+     * Font Awesome ã®ã‚¢ã‚¤ã‚³ãƒ³ã«å¯¾å¿œã™ã‚‹æ–‡å­—ã® UNICODEã€‚
      */
     private int mUnicode;
     
     /**
-     * ƒCƒ“ƒXƒ^ƒ“ƒX‚ğ‰Šú‰»‚µ‚Ü‚·B
+     * ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’åˆæœŸåŒ–ã—ã¾ã™ã€‚
      * 
-     * @param unicode Font Awesome ‚ÌƒAƒCƒRƒ“‚É‘Î‰‚·‚é•¶š‚Ì UNICODEB
+     * @param unicode Font Awesome ã®ã‚¢ã‚¤ã‚³ãƒ³ã«å¯¾å¿œã™ã‚‹æ–‡å­—ã® UNICODEã€‚
      */
     public IconInfo( char unicode ) {
         this.mGlyph   = String.valueOf( unicode );
@@ -35,16 +35,16 @@ public class IconInfo {
     }
 
     /**
-     * Font Awesome ‚ÌƒAƒCƒRƒ“‚É‘Î‰‚·‚é•¶š‚ğæ“¾‚µ‚Ü‚·B
+     * Font Awesome ã®ã‚¢ã‚¤ã‚³ãƒ³ã«å¯¾å¿œã™ã‚‹æ–‡å­—ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * @return •¶šB
+     * @return æ–‡å­—ã€‚
      */
     public String getGlyph() { return this.mGlyph; }
 
     /**
-     * Font Awesome ‚ÌƒAƒCƒRƒ“‚É‘Î‰‚·‚é•¶š‚Ì UNICODE ‚ğæ“¾‚µ‚Ü‚·B
+     * Font Awesome ã®ã‚¢ã‚¤ã‚³ãƒ³ã«å¯¾å¿œã™ã‚‹æ–‡å­—ã® UNICODE ã‚’å–å¾—ã—ã¾ã™ã€‚
      * 
-     * @return UNICODEB
+     * @return UNICODEã€‚
      */
     public int getUnicode() { return this.mUnicode; }
 }

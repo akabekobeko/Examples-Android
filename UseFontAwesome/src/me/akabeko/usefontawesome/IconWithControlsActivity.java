@@ -7,13 +7,13 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 /**
- * �A�C�R���Ɗe��R���g���[���̑g�ݍ��킹��\�������ʂł��B 
+ * アイコンと各種コントロールの組み合わせを表示する画面です。 
  */
 public class IconWithControlsActivity extends Activity {
     /**
-     * ��ʂ���������鎞�ɔ������܂��B
+     * 画面が生成される時に発生します。
      *
-     *  @param savedInstanceState �ۑ����ꂽ�C���X�^���X�̏�ԁB
+     *  @param savedInstanceState 保存されたインスタンスの状態。
      */
     @Override
     protected void onCreate( Bundle savedInstanceState ) {

@@ -11,18 +11,18 @@ import android.content.Intent;
 import android.graphics.Typeface;
 
 /**
- * ƒAƒCƒRƒ“ˆê——‚ğ•\¦‚·‚é‰æ–Ê‚Å‚·B
+ * ã‚¢ã‚¤ã‚³ãƒ³ä¸€è¦§ã‚’è¡¨ç¤ºã™ã‚‹ç”»é¢ã§ã™ã€‚
  */
 public class IconListActivity extends Activity {
     /**
-     * ƒtƒHƒ“ƒg‚ğres/raw ‚©‚ç“Ç‚İ‚Ş‚±‚Æ‚ğ¦‚·A^‹U’l‚Ìƒpƒ‰ƒ[ƒ^¯•ÊqB
+     * ãƒ•ã‚©ãƒ³ãƒˆã‚’res/raw ã‹ã‚‰èª­ã¿è¾¼ã‚€ã“ã¨ã‚’ç¤ºã™ã€çœŸå½å€¤ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿è­˜åˆ¥å­ã€‚
      */
     public static final String INTENT_EXTRA_LOAD_FONT_FROM_RAW = "LoadFontFromRaw";
 
     /**
-     * ƒtƒHƒ“ƒgî•ñ‚ğ“Ç‚İ‚İ‚Ü‚·B
+     * ãƒ•ã‚©ãƒ³ãƒˆæƒ…å ±ã‚’èª­ã¿è¾¼ã¿ã¾ã™ã€‚
      * 
-     * @return ƒtƒHƒ“ƒgî•ñB
+     * @return ãƒ•ã‚©ãƒ³ãƒˆæƒ…å ±ã€‚
      */
     private Typeface loadTypeface() {
         Intent intent = this.getIntent();
@@ -36,22 +36,22 @@ public class IconListActivity extends Activity {
     }
 
     /**
-     * ‰æ–Ê‚ª¶¬‚³‚ê‚é‚É”­¶‚µ‚Ü‚·B
+     * ç”»é¢ãŒç”Ÿæˆã•ã‚Œã‚‹æ™‚ã«ç™ºç”Ÿã—ã¾ã™ã€‚
      *
-     *  @param savedInstanceState •Û‘¶‚³‚ê‚½ƒCƒ“ƒXƒ^ƒ“ƒX‚Ìó‘ÔB
+     *  @param savedInstanceState ä¿å­˜ã•ã‚ŒãŸã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®çŠ¶æ…‹ã€‚
      */
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
         super.onCreate( savedInstanceState );
         this.setContentView( R.layout.activity_icon_list );
 
-        // ƒAƒCƒRƒ“î•ñƒRƒŒƒNƒVƒ‡ƒ“¶¬ ( •¶šƒR[ƒhŒ‡”Ô‚Í‚»‚Ì‚Ü‚ÜŠÜ‚ß‚é )
+        // ã‚¢ã‚¤ã‚³ãƒ³æƒ…å ±ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ç”Ÿæˆ ( æ–‡å­—ã‚³ãƒ¼ãƒ‰æ¬ ç•ªã¯ãã®ã¾ã¾å«ã‚ã‚‹ )
         List< IconInfo > iconInfos = new ArrayList< IconInfo >();
         for( char unicode = IconInfo.GRYPH_UNICODE_BEGIN; unicode <= IconInfo.GRYPH_UNICODE_END; ++unicode ) {
             iconInfos.add( new IconInfo( unicode ) );
         }
 
-        // ƒAƒ_ƒvƒ^‚ÆƒtƒHƒ“ƒg‚ğŠÖ˜A•t‚¯‚é
+        // ã‚¢ãƒ€ãƒ—ã‚¿ã¨ãƒ•ã‚©ãƒ³ãƒˆã‚’é–¢é€£ä»˜ã‘ã‚‹
         ListView listView = ( ListView )this.findViewById( R.id.iconListView );
         listView.setAdapter( new IconListItemAdapter( this, iconInfos, this.loadTypeface() ) );
     }

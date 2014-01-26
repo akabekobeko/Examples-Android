@@ -10,13 +10,13 @@ import android.app.Activity;
 import android.content.Intent;
 
 /**
- * ƒƒjƒ…[‰æ–Ê‚Å‚·B
+ * ãƒ¡ãƒ‹ãƒ¥ãƒ¼ç”»é¢ã§ã™ã€‚
  */
 public class TopMenuActivity extends Activity {
     /**
-     * ‰æ–Ê‚ª¶¬‚³‚ê‚é‚É”­¶‚µ‚Ü‚·B
+     * ç”»é¢ãŒç”Ÿæˆã•ã‚Œã‚‹æ™‚ã«ç™ºç”Ÿã—ã¾ã™ã€‚
      * 
-     *  @param savedInstanceState •Û‘¶‚³‚ê‚½ƒCƒ“ƒXƒ^ƒ“ƒX‚Ìó‘ÔB
+     *  @param savedInstanceState ä¿å­˜ã•ã‚ŒãŸã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®çŠ¶æ…‹ã€‚
      */
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
@@ -51,9 +51,9 @@ public class TopMenuActivity extends Activity {
     }
 
     /**
-     * ƒAƒCƒRƒ“ˆê——‰æ–Ê‚ğ•\¦‚µ‚Ü‚·B
+     * ã‚¢ã‚¤ã‚³ãƒ³ä¸€è¦§ç”»é¢ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
      *
-     * @param isLoadFontFromRaw ƒAƒCƒRƒ“‚ğ res/raw ‚©‚ç“Ç‚İ‚Şê‡‚Í trueBassets ‚Ìê‡‚Í falseB
+     * @param isLoadFontFromRaw ã‚¢ã‚¤ã‚³ãƒ³ã‚’ res/raw ã‹ã‚‰èª­ã¿è¾¼ã‚€å ´åˆã¯ trueã€‚assets ã®å ´åˆã¯ falseã€‚
      */
     private void showIconListActivity( boolean isLoadFontFromRaw ) {
         Intent intent = new Intent( TopMenuActivity.this, IconListActivity.class );
@@ -62,7 +62,7 @@ public class TopMenuActivity extends Activity {
     }
 
     /**
-     * ƒAƒCƒRƒ“‚ÆƒRƒ“ƒgƒ[ƒ‹‚Ì‘g‚İ‡‚í‚¹‰æ–Ê‚ğ•\¦‚µ‚Ü‚·B
+     * ã‚¢ã‚¤ã‚³ãƒ³ã¨ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®çµ„ã¿åˆã‚ã›ç”»é¢ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚
      */
     private void showIconWithControlsActivity() {
         Intent intent = new Intent( TopMenuActivity.this, IconWithControlsActivity.class );
