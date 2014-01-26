@@ -31,7 +31,7 @@ public class BasicCoordinationActivity extends Activity {
         if( !url.startsWith( CallbacScheme ) ) { return false; }
 
         String message = url.substring( CallbacScheme.length() );
-        new AlertDialog.Builder( BasicCoordinationActivity.this )
+        new AlertDialog.Builder( this )
             .setTitle( R.string.text_from_webview )
             .setMessage( message )
             .setPositiveButton( "OK", null )
