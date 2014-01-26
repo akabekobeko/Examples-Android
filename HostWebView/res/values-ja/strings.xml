@@ -5,5 +5,6 @@
     <string name="top_menu_basic_coordination">基本的な連携</string>
     <string name="top_menu_google_maps_api">Google Maps API 連携</string>
     <string name="text_from_webview">WebView からのテキスト</string>
-
+    <string name="google_map_rgion">jp</string>
+    
 </resources>
