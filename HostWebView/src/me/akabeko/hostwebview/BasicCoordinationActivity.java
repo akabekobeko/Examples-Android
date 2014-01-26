@@ -16,11 +16,29 @@ import android.app.AlertDialog;
  * WebView の基本的な連携をテストする画面です。
  */
 public class BasicCoordinationActivity extends Activity {
-    /** WebView 上の JavaScript からコールバックされる時の URL におけるスキーム。 */
-    private static final String WEBVIEW_CALLBACK_SCHEME = "app-callback://";
-
     /** ローカル HTML を表示する WebView。 */
     private WebView mWebView;
+
+    /**
+     * 指定された URL が WebView からのコールバックであることを調べ、対応する処理を実行します。
+     *
+     * @param url URL。
+     *
+     * @return コールバックだった場合は true。
+     */
+    private boolean checkCallbackUrl( String url ) {
+        final String CallbacScheme = "app-callback://";
+        if( !url.startsWith( CallbacScheme ) ) { return false; }
+
+        String message = url.substring( CallbacScheme.length() );
+        new AlertDialog.Builder( BasicCoordinationActivity.this )
+            .setTitle( R.string.text_from_webview )
+            .setMessage( message )
+            .setPositiveButton( "OK", null )
+            .show();
+
+        return true;
+    }
 
     /**
      * WebView 上に読み込まれた JavaScript の関数を実行します。
@@ -39,21 +57,10 @@ public class BasicCoordinationActivity extends Activity {
     private void initWebView() {
         this.mWebView = ( WebView )this.findViewById( R.id.webViewBasicCoordination );
         this.mWebView.getSettings().setJavaScriptEnabled( true );
-        this.mWebView.setWebViewClient( new WebViewClient(){
+        this.mWebView.setWebViewClient( new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading( WebView view, String url ) {
-                if( url.startsWith( WEBVIEW_CALLBACK_SCHEME ) ) {
-                    String message = url.substring( WEBVIEW_CALLBACK_SCHEME.length() );
-                    new AlertDialog.Builder( BasicCoordinationActivity.this )
-                        .setTitle( R.string.text_from_webview )
-                        .setMessage( message )
-                        .setPositiveButton( "OK", null )
-                        .show();
-
-                    return true;
-                }
-
-                return false;
+                return checkCallbackUrl( url );
             }
         } );
 
