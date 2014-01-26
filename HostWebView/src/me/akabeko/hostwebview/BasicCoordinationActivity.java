@@ -23,6 +23,16 @@ public class BasicCoordinationActivity extends Activity {
     private WebView mWebView;
 
     /**
+     * WebView 上に読み込まれた JavaScript の関数を実行します。
+     *
+     * @param param JavaScript の関数へ指定するパラメータ。
+     */
+    private void executeJavaScriptFunction( String param ) {
+        final String script = "javascript:window.webViewCallback('%s');";
+        this.mWebView.loadUrl( String.format( script, param ) );
+    }
+
+    /**
      * WebView を初期化します。
      */
     @SuppressLint( "SetJavaScriptEnabled" )
@@ -60,8 +70,9 @@ public class BasicCoordinationActivity extends Activity {
             public boolean onEditorAction( TextView v, int actionId, KeyEvent event ) {
                 if( event.getKeyCode() == KeyEvent.KEYCODE_ENTER ) {
                     InputMethodManager imm = ( InputMethodManager )getSystemService( INPUT_METHOD_SERVICE );
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY );
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS );
+                    imm.hideSoftInputFromWindow( v.getWindowToken(), InputMethodManager.HIDE_IMPLICIT_ONLY );
+                    imm.hideSoftInputFromWindow( v.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS );
+                    executeJavaScriptFunction( v.getText().toString() );
                 }
 
                 return false;
