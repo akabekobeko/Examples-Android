@@ -10,13 +10,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 /**
- * ƒƒjƒ…[‰æ–Ê‚Å‚·B
+ * ãƒ¡ãƒ‹ãƒ¥ãƒ¼ç”»é¢ã§ã™ã€‚
  */
 public class TopMenuActivity extends Activity {
     /**
-     * ‰æ–Ê‚ªì¬‚³‚ê‚é‚É”­¶‚µ‚Ü‚·B
+     * ç”»é¢ãŒä½œæˆã•ã‚Œã‚‹æ™‚ã«ç™ºç”Ÿã—ã¾ã™ã€‚
      *
-     * @param savedInstanceState •Û‘¶‚³‚ê‚½ƒCƒ“ƒXƒ^ƒ“ƒX‚Ìó‘ÔB
+     * @param savedInstanceState ä¿å­˜ã•ã‚ŒãŸã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®çŠ¶æ…‹ã€‚
      */
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
@@ -41,9 +41,9 @@ public class TopMenuActivity extends Activity {
     }
 
     /**
-     * w’è‚³‚ê‚½‰æ–Ê‚É‘JˆÚ‚µ‚Ü‚·B
+     * æŒ‡å®šã•ã‚ŒãŸç”»é¢ã«é·ç§»ã—ã¾ã™ã€‚
      *
-     * @param cls ˆÚ“®æ‚Æ‚È‚é Activity ‚ÌƒNƒ‰ƒXî•ñB
+     * @param cls ç§»å‹•å…ˆã¨ãªã‚‹ Activity ã®ã‚¯ãƒ©ã‚¹æƒ…å ±ã€‚
      */
     private void moveActivity( Class< ? > cls ) {
         Intent intent = new Intent( TopMenuActivity.this,cls );

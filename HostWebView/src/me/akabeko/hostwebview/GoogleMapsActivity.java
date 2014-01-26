@@ -12,18 +12,18 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 
 /**
- * WebView ã‚Ì Google Maps API ˜AŒg‚ğƒeƒXƒg‚·‚é‰æ–Ê‚Å‚·B
+ * WebView ä¸Šã® Google Maps API é€£æºã‚’ãƒ†ã‚¹ãƒˆã™ã‚‹ç”»é¢ã§ã™ã€‚
  */
 public class GoogleMapsActivity extends Activity {
-    /** ƒ[ƒJƒ‹ HTML ‚ğ•\¦‚·‚é WebViewB */
+    /** ãƒ­ãƒ¼ã‚«ãƒ« HTML ã‚’è¡¨ç¤ºã™ã‚‹ WebViewã€‚ */
     private WebView mWebView;
 
     /**
-     * w’è‚³‚ê‚½ URL ‚ª WebView ‚©‚ç‚ÌƒR[ƒ‹ƒoƒbƒN‚Å‚ ‚é‚±‚Æ‚ğ’²‚×A‘Î‰‚·‚éˆ—‚ğÀs‚µ‚Ü‚·B
+     * æŒ‡å®šã•ã‚ŒãŸ URL ãŒ WebView ã‹ã‚‰ã®ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã§ã‚ã‚‹ã“ã¨ã‚’èª¿ã¹ã€å¯¾å¿œã™ã‚‹å‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
      *
-     * @param url URLB
+     * @param url URLã€‚
      *
-     * @return ƒR[ƒ‹ƒoƒbƒN‚¾‚Á‚½ê‡‚Í trueB
+     * @return ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ã ã£ãŸå ´åˆã¯ trueã€‚
      */
     private boolean checkCallbackUrl( String url ) {
         final String CallbacScheme = "app-callback://map?";
@@ -33,15 +33,15 @@ public class GoogleMapsActivity extends Activity {
     }
 
     /**
-     * WebView ã‚É“Ç‚İ‚Ü‚ê‚½ JavaScript ‚ÌŠÖ”‚ğÀs‚µ‚Ü‚·B
+     * WebView ä¸Šã«èª­ã¿è¾¼ã¾ã‚ŒãŸ JavaScript ã®é–¢æ•°ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
      *
-     * @param param JavaScript ‚ÌŠÖ”‚Öw’è‚·‚éƒpƒ‰ƒ[ƒ^B
+     * @param param JavaScript ã®é–¢æ•°ã¸æŒ‡å®šã™ã‚‹ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã€‚
      */
     private void executeJavaScriptFunction( String param ) {
     }
 
     /**
-     * WebView ‚ğ‰Šú‰»‚µ‚Ü‚·B
+     * WebView ã‚’åˆæœŸåŒ–ã—ã¾ã™ã€‚
      */
     @SuppressLint( "SetJavaScriptEnabled" )
     private void initWebView() {
@@ -58,7 +58,7 @@ public class GoogleMapsActivity extends Activity {
     }
 
     /**
-     * WebView ‚Ö‘—M‚·‚éƒeƒLƒXƒg‚ğ“ü—Í‚·‚é‚½‚ß‚Ì EditText ‚ğ‰Šú‰»‚µ‚Ü‚·B
+     * WebView ã¸é€ä¿¡ã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆã‚’å…¥åŠ›ã™ã‚‹ãŸã‚ã® EditText ã‚’åˆæœŸåŒ–ã—ã¾ã™ã€‚
      */
     private void initEditText() {
         EditText editText = ( EditText )this.findViewById( R.id.editTextSendWebView );
@@ -78,9 +78,9 @@ public class GoogleMapsActivity extends Activity {
     }
 
     /**
-     * ‰æ–Ê‚ªì¬‚³‚ê‚é‚É”­¶‚µ‚Ü‚·B
+     * ç”»é¢ãŒä½œæˆã•ã‚Œã‚‹æ™‚ã«ç™ºç”Ÿã—ã¾ã™ã€‚
      *
-     * @param savedInstanceState •Û‘¶‚³‚ê‚½ƒCƒ“ƒXƒ^ƒ“ƒX‚Ìó‘ÔB
+     * @param savedInstanceState ä¿å­˜ã•ã‚ŒãŸã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã®çŠ¶æ…‹ã€‚
      */
     @Override
     protected void onCreate( Bundle savedInstanceState ) {
